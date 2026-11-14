@@ -71,7 +71,7 @@ jobs:
 
       - name: Generate Build Number
         if: steps.changes.outputs.deploy == 'true'
-        uses: einaregilsson/build-number@v2
+        uses: einaregilsson/build-number@v3
         with:
           token: ${{ secrets.github_token }}
         env:
