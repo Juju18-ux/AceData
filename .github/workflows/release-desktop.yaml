@@ -54,7 +54,7 @@ jobs:
     name: E2E smoke (Linux)
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           ref: ${{ inputs.release_tag || github.sha }}
       - uses: actions/setup-node@v6
@@ -91,7 +91,7 @@ jobs:
             arch: arm64
     runs-on: ${{ matrix.os }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           ref: ${{ inputs.release_tag || github.sha }}
       - uses: actions/setup-node@v6
